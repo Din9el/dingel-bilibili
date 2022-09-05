@@ -6,6 +6,7 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
+@RestController
 public class RestfulDemoApi {
 
     private final Map<Integer,Map<String,Object>> dataMap;
