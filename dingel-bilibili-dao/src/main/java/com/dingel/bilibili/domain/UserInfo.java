@@ -1,4 +1,4 @@
-package com.dingel.bilibili.domain.exception;
+package com.dingel.bilibili.domain;
 
 import java.util.Date;
 
