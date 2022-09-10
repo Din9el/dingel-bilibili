@@ -18,9 +18,17 @@ public class UserInfo {
 
     private String birth;
 
-    private Date creatTime;
+    private Date createTime;
 
     private Date updateTime;
+
+    public Date getCreateTime() {
+        return createTime;
+    }
+
+    public void setCreateTime(Date createTime) {
+        this.createTime = createTime;
+    }
 
     public Long getId() {
         return id;
@@ -78,13 +86,7 @@ public class UserInfo {
         this.birth = birth;
     }
 
-    public Date getCreatTime() {
-        return creatTime;
-    }
 
-    public void setCreatTime(Date creatTime) {
-        this.creatTime = creatTime;
-    }
 
     public Date getUpdateTime() {
         return updateTime;

@@ -1,8 +1,11 @@
 package com.dingel.bilibili.domain;
 
+import com.dingel.bilibili.domain.UserInfo;
+
 import java.util.Date;
 
 public class User {
+
     private Long id;
 
     private String phone;
@@ -16,6 +19,8 @@ public class User {
     private Date createTime;
 
     private Date updateTime;
+
+    private UserInfo userInfo;
 
     public Long getId() {
         return id;
@@ -71,5 +76,13 @@ public class User {
 
     public void setUpdateTime(Date updateTime) {
         this.updateTime = updateTime;
+    }
+
+    public UserInfo getUserInfo() {
+        return userInfo;
+    }
+
+    public void setUserInfo(UserInfo userInfo) {
+        this.userInfo = userInfo;
     }
 }
