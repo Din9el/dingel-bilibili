@@ -4,6 +4,7 @@ package com.dingel.bilibili.api;
 import com.dingel.bilibili.api.support.UserSupport;
 import com.dingel.bilibili.domain.JsonResponse;
 import com.dingel.bilibili.domain.User;
+import com.dingel.bilibili.domain.UserInfo;
 import com.dingel.bilibili.service.UserService;
 import com.dingel.bilibili.service.util.RSAUtil;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -49,7 +50,23 @@ public class UserApi {
         return new JsonResponse<>(token);
     }
 
+    @PutMapping("/users")
+    public JsonResponse<String> updateUsers(@RequestBody User user) throws Exception{
+        Long userId = userSupport.getCurrentUserId();
+        user.setId(userId);
+        userService.updateUsers(user);
+        return JsonResponse.success();
+    }
 
+    //用户更新
+    @PutMapping("/user-infos")
+    public JsonResponse<String> updateUserInfos(@RequestBody UserInfo userInfo){
+        Long userId = userSupport.getCurrentUserId();
+        userInfo.setUserId(userId);
+        userService.updateUserInfos(userInfo);
+        return JsonResponse.success();
+
+    }
 
 
 
