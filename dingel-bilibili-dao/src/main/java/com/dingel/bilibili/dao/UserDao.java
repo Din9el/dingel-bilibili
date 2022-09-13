@@ -7,6 +7,7 @@ import org.apache.ibatis.annotations.Mapper;
 
 @Mapper
 public interface UserDao {
+
     User getUserByPhone(String phone);
 
     Integer addUser(User user);
@@ -21,5 +22,5 @@ public interface UserDao {
 
     User getUserByPhoneOrEmail(String phone);
 
-     Integer updateUserInfos(UserInfo userInfo);
+    Integer updateUserInfos(UserInfo userInfo);
 }

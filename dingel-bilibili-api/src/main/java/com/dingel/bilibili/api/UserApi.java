@@ -50,6 +50,7 @@ public class UserApi {
         return new JsonResponse<>(token);
     }
 
+    //用户更新
     @PutMapping("/users")
     public JsonResponse<String> updateUsers(@RequestBody User user) throws Exception{
         Long userId = userSupport.getCurrentUserId();
@@ -58,7 +59,7 @@ public class UserApi {
         return JsonResponse.success();
     }
 
-    //用户更新
+    //用户信息更新
     @PutMapping("/user-infos")
     public JsonResponse<String> updateUserInfos(@RequestBody UserInfo userInfo){
         Long userId = userSupport.getCurrentUserId();
