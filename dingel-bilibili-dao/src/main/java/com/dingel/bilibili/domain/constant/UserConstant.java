@@ -14,4 +14,7 @@ public interface UserConstant {
 
     public static final String DEFAULT_NICK = "Dingel";
 
+
+    public static final String USER_FOLLOWING_GROUP_TYPE_DEFAULT = "2";
+
 }
