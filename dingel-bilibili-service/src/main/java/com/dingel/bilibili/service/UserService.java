@@ -15,6 +15,8 @@ import org.springframework.stereotype.Service;
 import sun.security.krb5.internal.PAData;
 
 import java.util.Date;
+import java.util.List;
+import java.util.Set;
 
 @Service
 public class UserService {
@@ -115,5 +117,13 @@ public class UserService {
         userDao.updateUserInfos(userInfo);
 
 
+    }
+
+    public User getUserById(Long followingId) {
+        return userDao.getUserById(followingId);
+    }
+
+    public List<UserInfo> getUserInfoByUserIds(Set<Long> userIdList) {
+        return userDao.getUserInfoByUserIds(userIdList);
     }
 }

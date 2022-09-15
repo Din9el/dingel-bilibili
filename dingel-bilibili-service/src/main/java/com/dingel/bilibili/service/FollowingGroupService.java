@@ -6,6 +6,8 @@ import com.dingel.bilibili.domain.FollowingGroup;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class FollowingGroupService {
 
@@ -23,5 +25,7 @@ public class FollowingGroupService {
     }
 
 
-
+    public List<FollowingGroup> getUserById(Long userId) {
+        return followingGroupDao.getUserById(userId);
+    }
 }

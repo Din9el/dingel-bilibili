@@ -1,6 +1,7 @@
 package com.dingel.bilibili.domain;
 
 import java.util.Date;
+import java.util.List;
 
 public class FollowingGroup {
 
@@ -15,6 +16,16 @@ public class FollowingGroup {
     private Date createTime;
 
     private Date updateTime;
+
+    private List<UserInfo> followingUserInfoList;
+
+    public List<UserInfo> getFollowingUserInfoList() {
+        return followingUserInfoList;
+    }
+
+    public void setFollowingUserInfoList(List<UserInfo> followingUserInfoList) {
+        this.followingUserInfoList = followingUserInfoList;
+    }
 
     public Long getId() {
         return id;
